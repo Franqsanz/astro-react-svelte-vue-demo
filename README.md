@@ -1,5 +1,7 @@
 # Astro App + React + Svelte + Vue [Demo]
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2b8bae6-5b91-4ef6-8b5e-2e275ee0b7ec/deploy-status)](https://app.netlify.com/sites/astro-app-demo/deploys)
+
 Probando Astro con multiples frameworks!
 ## Commands
 
