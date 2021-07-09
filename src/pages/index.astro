@@ -2,10 +2,12 @@
 import TodoVue from '../components/Todo.vue';
 import TodoSvelte from '../components/Todo.svelte';
 import TodoReact from '../components/Todo.jsx';
-// import Footer from '../components/Footer.astro';
-import Main from '../layouts/main.astro';
+import Footer from '../components/Footer.astro';
+import Main from '../layouts/Main.astro';
 ---
-<Main />
+
+<Main /> <!-- Componente Base -->
+
 <section class="contentTodos">
   <div class="todo">
     <h1>React</h1>
@@ -20,4 +22,4 @@ import Main from '../layouts/main.astro';
     <TodoVue:load />
   </div>
 </section>
-<!-- <Footer /> -->
+<Footer />

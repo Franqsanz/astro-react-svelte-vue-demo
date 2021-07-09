@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: light) {
   .todo {
-    background:#dfdfdf;
+    background:#ececec;
   }
 }
 
@@ -15,7 +15,7 @@
   }
 
   .todo {
-    background: #233762;
+    background: #172542;
   }
 }
 
@@ -31,6 +31,7 @@ header > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 0 0 0;
 }
 
 header h1 {
@@ -48,13 +49,14 @@ h2 {
   font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
 }
 
-/* .contentTodos {
-  display: flex;
-  justify-content: space-around;
-} */
+.contentTodos {
+  padding: 4rem 1rem 2rem 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
 
 .todo {
-  padding: 1.5em;
+  padding: 0.7em 2em 1em 2em;
   margin: 2ch 0 0 0;
   border-radius: 10px;
 }

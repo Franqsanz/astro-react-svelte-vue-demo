@@ -14,8 +14,9 @@
 		newDog = null;
 	}
 
-	// function removeDog(index) {
-	// 	dogs.splice(index, 1);
+	// function removeDog(id) {
+	// 	let rm = dogs.filter((dog) => dog.id == id);
+	// 	// dogs.splice(id, 1);
 	// }
 
   function handleSubmit(e) {
