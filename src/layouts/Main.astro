@@ -1,10 +1,16 @@
 ---
 import Meta from '../components/Meta.astro';
+
+let title = 'Wow my first site with Astro!!';
+
 ---
 
 <!doctype html>
 <html lang="en">
-  <Meta /> <!-- Meta data -->
+  <head>
+    <title>{title}</title>
+    <Meta /> <!-- Meta data -->
+  </head>
   <body>
     <main>
       <header>
@@ -13,6 +19,7 @@ import Meta from '../components/Meta.astro';
           <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
         </div>
       </header>
+      <slot />
     </main>
   </body>
 </html>
