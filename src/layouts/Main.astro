@@ -1,19 +1,20 @@
 ---
 import Meta from '../components/Meta.astro';
+import Footer from '../components/Footer.astro';
+// import Nav from '../components/Nav.astro';
 
-let title = 'Wow my first site with Astro!!';
-
+// const { title = 'Wow my first site with Astro!!' } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <title>{title}</title>
     <Meta /> <!-- Meta data -->
   </head>
   <body>
     <main>
       <header>
+        <!-- <Nav /> -->
         <div>
           <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
           <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
@@ -21,5 +22,6 @@ let title = 'Wow my first site with Astro!!';
       </header>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

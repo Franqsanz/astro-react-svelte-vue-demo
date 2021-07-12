@@ -7,6 +7,10 @@
   .todo {
     background:#ececec;
   }
+
+  footer {
+    color: var(--color-light);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,5 +81,11 @@ li {
 
 form {
   margin-top: 2ch;
+  text-align: center;
+}
+
+footer {
+  background: black;
+  padding: 1.1rem;
   text-align: center;
 }
