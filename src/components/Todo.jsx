@@ -22,21 +22,28 @@ export default function App() {
     e.preventDefault();
   };
 
-  // function removeDog(index) {
-  //   dogs.splice(index, 1);
-  // }
+  function removeDog(index) {
+    const newDogs = [...dogs];
+    newDogs.splice(index, 1);
+    setDogs(newDogs);
+  }
 
   return (
     <>
+      <div className="title">
+        <h1>React</h1>
+        <span>
+          Total <strong>{dogs.length}</strong>
+        </span>
+      </div>
       <ul>
         {dogs.map((dog, index) => (
           <li key={index}>
             {dog.name}
-            {/* <button onClick={removeDog}>X</button> */}
+            <button onClick={removeDog}>X</button>
           </li>
         ))}
       </ul>
-
       <form onSubmit={handleSubmit}>
         <input
           type="text"

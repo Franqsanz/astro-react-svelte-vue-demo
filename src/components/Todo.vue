@@ -1,8 +1,14 @@
 <template>
+  <div class="title">
+    <h1>Vue</h1>
+    <span>
+      Total <strong>{{dogs.length}}</strong>
+    </span>
+  </div>
   <ul>
     <li v-for="dog in dogs" :key="dog.id">
       {{dog.name}}
-      <!-- <button @click="removeDog">X</button> -->
+      <button @click="removeDog">X</button>
     </li>
   </ul>
   <form @submit="handleSubmit">
@@ -12,36 +18,38 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      newDog: null,
-      dogs: [],
-    };
-  },
-  methods: {
-    handleSubmit(e) {
-      e.preventDefault();
+  export default {
+    data() {
+      return {
+        newDog: null,
+        dogs: []
+      };
     },
+    methods: {
+      handleSubmit(e) {
+        e.preventDefault();
+      },
 
-    addDog() {
-      if (!this.newDog) return;
+      addDog() {
+        if (!this.newDog) return;
 
-      this.dogs = [...this.dogs,
-        {
-          id: new Date(),
-          name: this.newDog
-        }
-      ];
+        this.dogs = [...this.dogs,
+          {
+            id: new Date(),
+            name: this.newDog
+          }
+        ];
 
-      this.newDog = null;
+        this.newDog = null;
+      },
+
+      removeDog(index) {
+        const newDogs = [...this.dogs];
+        newDogs.splice(index, 1);
+        this.dogs = newDogs;
+      },
     },
-
-    // removeDog(index) {
-    //   this.dogs.splice(index, 1);
-    // },
-  },
-};
+  };
 </script>
 
 <style scoped></style>
