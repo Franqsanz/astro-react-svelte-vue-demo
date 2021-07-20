@@ -5,6 +5,9 @@
       Total <strong>{{dogs.length}}</strong>
     </span>
   </div>
+  <div class="msj" v-if="(dogs.length >= 10)">
+		<p>¡Wow ya 10 tareas!</p>
+	</div>
   <ul>
     <li v-for="dog in dogs" :key="dog.id">
       {{dog.name}}

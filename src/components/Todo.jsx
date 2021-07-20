@@ -5,7 +5,7 @@ export default function App() {
   const [newDog, setNewDog] = useState("");
 
   function addDog() {
-    if (!newDog) return;
+    if (!newDog) return
 
     let newDogs = [...dogs,
       {
@@ -26,6 +26,13 @@ export default function App() {
     const newDogs = [...dogs];
     newDogs.splice(index, 1);
     setDogs(newDogs);
+  }
+
+  if (dogs.length >= 10) {
+    // <div class="msj">
+    //   <p>¡Wow ya 10 tareas!</p>
+    // </div>
+    console.log('wow');
   }
 
   return (

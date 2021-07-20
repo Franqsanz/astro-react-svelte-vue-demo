@@ -32,6 +32,11 @@
 		Total <strong>{dogs.length}</strong>
 	</span>
 </div>
+{#if (dogs.length >= 10)}
+	<div class="msj">
+		<p>¡Wow ya 10 tareas!</p>
+	</div>
+{/if}
 <ul>
 	{#each dogs as {id, name} }
 		<li key={id}>
@@ -40,13 +45,6 @@
     </li>
 	{/each}
 </ul>
-{#if (dogs.length >= 10)}
-	<div class="secret">
-		<p>
-			Hola reina querida, gracias por ser la persona que sos conmigo, te quiero un monton y me gustas un montooon!!!
-		</p>
-	</div>
-{/if}
 
 <form on:submit={handleSubmit}>
   <input type="text" bind:value={newDog} />
