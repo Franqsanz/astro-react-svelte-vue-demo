@@ -8,6 +8,10 @@
     background:#ececec;
   }
 
+  li {
+    background: #ffffff;
+  }
+
   footer {
     color: var(--color-light);
   }
@@ -20,6 +24,10 @@
 
   .todo {
     background: #172542;
+  }
+
+  li {
+    background: #2b509d;
   }
 }
 
@@ -60,10 +68,9 @@ h2 {
 }
 
 .todo {
-  padding: 0.7em 2em 1em 2em;
+  padding: 1.2em 2em 1em 2em;
   margin: 2ch 0 0 0;
   border-radius: 10px;
-  box-shadow: 0 0 10px black;
 }
 
 .title {
@@ -74,6 +81,13 @@ h2 {
 
 span {
   font-size: 1.2em;
+}
+
+strong {
+  background: gold;
+  color: black;
+  padding: 0.1em;
+  border-radius: 5px;
 }
 
 ul {
@@ -89,9 +103,13 @@ li {
   justify-content: space-between;
   list-style: none;
   margin: 0.8ch;
+  padding: 0.4em;
+  border-radius: 10px;
 }
 
 form {
+  display: flex;
+  justify-content: space-between;
   margin-top: 2ch;
   text-align: center;
 }
@@ -104,10 +122,20 @@ input, button {
 }
 
 .msj {
-  margin-top: 1ch;
+  margin-top: 2ch;
   background: gold;
   color: black;
   padding: 0.7rem;
   font-weight: 300;
   border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  form {
+    flex-direction: column;
+  }
+
+  input, button {
+    margin-top: 2ch;
+  }
 }

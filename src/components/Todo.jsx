@@ -28,21 +28,26 @@ export default function App() {
     setDogs(newDogs);
   }
 
-  if (dogs.length >= 10) {
-    // <div class="msj">
-    //   <p>¡Wow ya 10 tareas!</p>
-    // </div>
-    console.log('wow');
-  }
+  // if (dogs.length >= 10) {
+  //   <div class="msj">
+  //     <p>¡Wow ya 10 tareas!</p>
+  //   </div>
+  //   console.log('wow');
+  // }
 
   return (
     <>
       <div className="title">
         <h1>React</h1>
         <span>
-          Total <strong>{dogs.length}</strong>
+          Tareas <strong>{dogs.length}</strong>
         </span>
       </div>
+      {dogs.length >= 10 &&
+        <div className="msj">
+          <p>¡Wow ya 10 tareas!</p>
+        </div>
+      }
       <ul>
         {dogs.map((dog, index) => (
           <li key={index}>

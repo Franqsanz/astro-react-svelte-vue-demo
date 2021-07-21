@@ -29,7 +29,7 @@
 <div class="title">
 	<h1>Svelte</h1>
 	<span>
-		Total <strong>{dogs.length}</strong>
+		Tareas <strong>{dogs.length}</strong>
 	</span>
 </div>
 {#if (dogs.length >= 10)}
@@ -48,7 +48,7 @@
 
 <form on:submit={handleSubmit}>
   <input type="text" bind:value={newDog} />
-  <button on:click={addDog} on:keyup={addDog}>Add a Dog</button>
+  <button on:click={addDog}>Add a Dog</button>
 </form>
 
 <style></style>

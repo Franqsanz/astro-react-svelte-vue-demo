@@ -2,7 +2,7 @@
   <div class="title">
     <h1>Vue</h1>
     <span>
-      Total <strong>{{dogs.length}}</strong>
+      Tareas <strong>{{dogs.length}}</strong>
     </span>
   </div>
   <div class="msj" v-if="(dogs.length >= 10)">
