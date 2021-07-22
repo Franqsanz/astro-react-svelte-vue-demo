@@ -41,14 +41,14 @@
 	{#each dogs as {id, name} }
 		<li key={id}>
 			{name}
-      <button on:click={removeDog}>X</button>
+      <button on:click={removeDog} class="remove">X</button>
     </li>
 	{/each}
 </ul>
 
 <form on:submit={handleSubmit}>
-  <input type="text" bind:value={newDog} />
-  <button on:click={addDog}>Add a Dog</button>
+  <input type="text" bind:value={newDog} placeholder="Add" />
+  <button on:click={addDog} class="add">Add a Dog</button>
 </form>
 
 <style></style>

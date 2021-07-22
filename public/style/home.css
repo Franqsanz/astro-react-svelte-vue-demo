@@ -101,9 +101,10 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
   margin: 0.8ch;
-  padding: 0.4em;
+  padding: 0.4em 0.5em 0.4em 1.1em;
   border-radius: 10px;
 }
 
@@ -114,8 +115,8 @@ form {
   text-align: center;
 }
 
-input, button {
-  padding: 0.5em;
+input, .add, .remove {
+  padding: 0.7em;
   border-radius: 10px;
   border: 1px solid gray;
   background: #f5f5f5;
@@ -135,7 +136,7 @@ input, button {
     flex-direction: column;
   }
 
-  input, button {
+  input, .add {
     margin-top: 2ch;
   }
 }

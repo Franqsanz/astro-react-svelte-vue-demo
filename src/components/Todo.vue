@@ -11,12 +11,12 @@
   <ul>
     <li v-for="dog in dogs" :key="dog.id">
       {{dog.name}}
-      <button @click="removeDog">X</button>
+      <button @click="removeDog" class="remove">X</button>
     </li>
   </ul>
   <form @submit="handleSubmit">
-    <input type="text" v-model="newDog">
-    <button @click="addDog">Add a Dog</button>
+    <input type="text" v-model="newDog" placeholder="Add">
+    <button @click="addDog" class="add">Add a Dog</button>
   </form>
 </template>
 

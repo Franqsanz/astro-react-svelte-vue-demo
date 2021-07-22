@@ -52,7 +52,7 @@ export default function App() {
         {dogs.map((dog, index) => (
           <li key={index}>
             {dog.name}
-            <button onClick={removeDog}>X</button>
+            <button onClick={removeDog}className="remove">X</button>
           </li>
         ))}
       </ul>
@@ -60,9 +60,10 @@ export default function App() {
         <input
           type="text"
           value={newDog}
+          placeholder="Add"
           onChange={(e) => setNewDog(e.target.value)}
         />
-        <button onClick={addDog}>Add a Dog</button>
+        <button onClick={addDog} className="add">Add a Dog</button>
       </form>
     </>
   );
